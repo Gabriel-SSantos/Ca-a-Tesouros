@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Caça Tesouro</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <h1>Seus Desafios</h1>
+        <!-- <section id="secaoDesafios">
+            <div class="Desafio" onclick="desafio1()"> 
+                <img src="recursos/image_1-removebg-preview 1.png" alt="Cadeado Fechado">
+                <p class="textoDesafio">Desafio 1</p>
+            </div>
+            
+        </section> -->
+        <!-- <section id="desbloqueioDesafio">
+            <div class="Desafio" onclick="desafio1()"> 
+                <img src="recursos/image_1-removebg-preview 1.png" alt="Cadeado Fechado">
+                <p class="textoDesafio">Desafio 1</p>
+            </div>                
+            <input type="text" id="senha">
+        </section> -->
+        <section style="display: flex; flex-direction: column; align-items: center;">
+            <div class="Desafio" style="width: 60%;"> 
+                <img src="recursos/image_1-removebg-preview 2.png" alt="Cadeado Aberto">
+                <p class="textoDesafio">Desafio 1</p>
+            </div> 
+            <div id="tela" style="position: relative; display: inline-block;">
+                <canvas id="canva" style="border: solid;">
+                </canvas>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Juventude Êxodo</p>
+    </footer>
+    <script src="controles.js"></script>
+    <script src="script.js"></script>
+
+    <script src="jogosScripts/quebracabeça.js"></script>
+
+</body>
+</html>
