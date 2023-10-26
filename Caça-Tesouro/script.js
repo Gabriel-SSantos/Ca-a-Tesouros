@@ -38,6 +38,7 @@ class quadros{
         this.y = y,
         this.l = l,
         this.a = a,
+        this.color = 'black'
         this.forma = new Image(),
         this.recorte = {
             x: 0,
@@ -53,6 +54,7 @@ class quadros{
         this.obstaculoBaixo = false
     }
     desenhar(){
+        ctx.fillStyle = this.color
         ctx.fillRect(this.x,this.y,this.l,this.a)
     }
     moverDireita(){
@@ -71,13 +73,19 @@ class quadros{
         if(this.y + this.a < canva.width && !this.obstaculoBaixo)
             this.y += this.a
     }
-    moverQuadro(x,y){
+    moverQuadroX(x){
         if (x > 0){
             this.moverDireita()
+        } else {
+            this.moverEsquerda()
         }
+    }
+    moverQuadroY(y){
         if(y > 0){
             this.moverBaixo()
-        } 
+        } else {
+            this.moverCima()
+        }
     }
 }
 
@@ -92,7 +100,7 @@ class Area extends quadros{
         }
     }
     EntrarPelaDireita(Objeto){
-        if(Objeto.x + Objeto.l + 1 > this.x && Objeto.x < this.x && ((Objeto.y + Objeto.a > this.y && Objeto.y < this.y + this.a)||(Objeto.y + Objeto.a > this.y + this.a && Objeto.y < this.y))){
+        if(Objeto.x + Objeto.l  > this.x && Objeto.x < this.x && ((Objeto.y + Objeto.a > this.y && Objeto.y < this.y + this.a)||(Objeto.y + Objeto.a > this.y + this.a && Objeto.y < this.y))){
             return true
         } 
     }
@@ -119,7 +127,7 @@ class Colisoes extends Area{
     }
     barrar(Objeto){
         if(super.EntrarPorBaixo(Objeto)){
-            Objeto.y = this.y - Objeto.a 
+            //Objeto.y = this.y - Objeto.a 
             Objeto.obstaculoBaixo = true
             return true 
         }else{
@@ -128,7 +136,7 @@ class Colisoes extends Area{
     }
     barrarLateral(Objeto){
         if(super.EntrarPelaDireita(Objeto)){
-            Objeto.x = this.x - Objeto.l
+           // Objeto.x = this.x - Objeto.l
             Objeto.obstaculoDir = true 
             return true
         } 
@@ -136,7 +144,7 @@ class Colisoes extends Area{
               Objeto.obstaculoDir = false
         }
         if(super.EntrarPelaEsquerda(Objeto)){
-            Objeto.x = this.x + this.l 
+           // Objeto.x = this.x + this.l 
             Objeto.obstaculoEsq = true 
             return true
         } 
@@ -161,12 +169,15 @@ class Colisoes extends Area{
     }
     clicando(){
         if(pincel.ativo){
-            if(pincel.pos.x > this.x && pincel.pos.x < this.x + this.l && pincel.pos.y > this.y){
-                console.log('opa')
-                console.log(posicao)
+            if(pincel.pos.x > this.x && pincel.pos.x < this.x + this.l && pincel.pos.y > this.y && pincel.pos.y < this.y + this.a){
+                this.color = 'red'
                 pincel.ativo = false
-                super.moverQuadro(posicao.x,posicao.y)  
-                
+                if(Math.pow(posicao.x,2) > Math.pow(posicao.y,2)){
+                    console.log(posicao.x)
+                    super.moverQuadroX(posicao.x)
+                }
+                else 
+                    super.moverQuadroY(posicao.y)
             }
         }
     }
@@ -197,13 +208,13 @@ function exibir(v){
 
 let quadro = [
     new Colisoes(0,0,espacos,espacos),
-    //new Colisoes(0,recortes[1],espacos,espacos),
-    //new Colisoes(0,recortes[2],espacos,espacos),
+    new Colisoes(0,recortes[1],espacos,espacos),
+    new Colisoes(0,recortes[2],espacos,espacos),
     new Colisoes(recortes[1],0,espacos,espacos),
     new Colisoes(recortes[1],recortes[1],espacos,espacos),
     new Colisoes(recortes[1],recortes[2],espacos,espacos),
     //new Colisoes(recortes[2],0,espacos,espacos),
-    //new Colisoes(recortes[2],recortes[1],espacos,espacos),
+    new Colisoes(recortes[2],recortes[1],espacos,espacos),
     new Colisoes(recortes[2],recortes[2],espacos,espacos)
 ]
 i = 0
