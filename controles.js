@@ -170,5 +170,8 @@ tela.addEventListener('touchmove',(evento)=>{
     var toque = evento.changedTouches;
     pincel.pos.x = toque[0].pageX; 
     pincel.pos.y = toque[0].pageY;
-    
+    posicao = {
+        x: pincel.pos.x - pincel.posAnterior.x,
+        y: pincel.pos.y - pincel.posAnterior.y 
+    }
 })
