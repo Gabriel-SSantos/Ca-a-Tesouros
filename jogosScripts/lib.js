@@ -265,8 +265,8 @@ class Colisoes extends Area{
         if(pincel.ativo){
             if(pincel.pos.x > this.x && pincel.pos.x < this.x + this.l && pincel.pos.y > this.y && pincel.pos.y < this.y + this.a){
                 pincel.ativo = false
-                super.moverDir(this.l)
-                super.moverEsq(this.l)
+                super.moverDireita(this.l)
+                super.moverEsquerda(this.l)
                 super.moverCima(this.a)
                 super.moverBaixo(this.a)
                 if(Math.pow(posicao.x,2) > Math.pow(posicao.y,2)){
