@@ -164,14 +164,14 @@ tela.addEventListener('touchstart',(evento)=>{
     evento.preventDefault()
     var toque = evento.changedTouches;
     pincel.ativo = true;
-    pincel.posAnterior = {x: toque[0].pageX - 200, y: toque[0].pageY - 200}
+    pincel.posAnterior = {x: toque[0].pageX + 210, y: toque[0].pageY - 210}
 })
 
 tela.addEventListener('touchend',(evento)=>{
    // pincel.posAnterior = null 
     var toque = evento.changedTouches;
-    pincel.pos.x = toque[0].pageX - 200
-    pincel.pos.y = toque[0].pageY - 200
+    pincel.pos.x = toque[0].pageX + 210
+    pincel.pos.y = toque[0].pageY - 210
     posicao = {
         x: pincel.pos.x - pincel.posAnterior.x,
         y: pincel.pos.y - pincel.posAnterior.y 
@@ -181,8 +181,8 @@ tela.addEventListener('touchend',(evento)=>{
 tela.addEventListener('touchmove',(evento)=>{
     evento.preventDefault()
     var toque = evento.changedTouches;
-    pincel.pos.x = toque[0].pageX - 200; 
-    pincel.pos.y = toque[0].pageY - 200;
+    pincel.pos.x = toque[0].pageX + 210; 
+    pincel.pos.y = toque[0].pageY - 210;
     pincel.posAnterior = {x: pincel.pos.x, y: pincel.pos.y}
     
 })
