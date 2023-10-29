@@ -62,6 +62,7 @@ function testes(){
     }
     if(keys.value == block[1] && desafioAtual == 1){
         desafioDesbloqueado(1,'DesafioAtual')
+        bnt.style.display = 'flex'
     }
     
 
