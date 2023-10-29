@@ -5,7 +5,7 @@ console.log(desafios)
 
 function desafio1(){
     secDesafio.innerHTML = "<div class= 'Desafio' style='width: 60%;'> <img src='recursos/image_1-removebg-preview 2.png' alt='Cadeado Aberto'><p class='textoDesafio'>Desafio 1</p></div>"
-    jogos.style.display = 'flex';
+    jogos.style.display = 'inline';
     
     desenho()
 }
