@@ -27,21 +27,28 @@ class quadros{
         ctx.drawImage(this.forma,this.x,this.y,this.l,this.a)
     }
     moverDireita(vel){
-        if(this.x + this.l < canva.height && !this.obstaculoDir)
+        if(this.x + this.l < canva.height && !this.obstaculoDir){
             this.x += vel
+            return true
+        }
     }
     moverEsquerda(vel){
-        if(this.x > 0 && !this.obstaculoEsq)
+        if(this.x > 0 && !this.obstaculoEsq){
             this.x -= vel
+            return true
+        }
     }
     moverCima(vel){
         if(this.y > 0 && !this.obstaculoCima){
             this.y -= vel
+            return true
         }
     }
     moverBaixo(vel){
-        if(this.y + this.a < canva.width && !this.obstaculoBaixo)
+        if(this.y + this.a < canva.width && !this.obstaculoBaixo){
             this.y += vel
+            return true
+        }
     }
     moverQuadroX(x){
         if (x > 0){
@@ -265,15 +272,10 @@ class Colisoes extends Area{
         if(pincel.ativo){
             if(pincel.pos.x > this.x && pincel.pos.x < this.x + this.l && pincel.pos.y > this.y && pincel.pos.y < this.y + this.a){
                 pincel.ativo = false
-                super.moverDireita(this.l)
-                super.moverEsquerda(this.l)
-                super.moverCima(this.a)
-                super.moverBaixo(this.a)
-                if(Math.pow(posicao.x,2) > Math.pow(posicao.y,2)){
-                    super.moverQuadroX(posicao.x)
-                }
-                else 
-                    super.moverQuadroY(posicao.y)
+                if(!super.moverDireita(this.l))
+                    super.moverEsquerda(this.l)
+                if(!super.moverBaixo(this.a))
+                    super.moverCima(this.a)
             }
         }
     }
