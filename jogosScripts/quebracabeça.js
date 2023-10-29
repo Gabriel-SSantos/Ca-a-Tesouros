@@ -59,10 +59,11 @@ function desenho(){
     //     quadro[0].moverBaixo()
     // ctx.fillText(`x: ${pincel.pos.x} y: ${pincel.pos.y}`,pincel.pos.x,pincel.pos.y,50)
     contarPontos(quadro)
-    quebracabeca = setInterval(desenho,100)
+    
     //console.log(pontos)
     //ctx.drawImage(imagem,0,0,canva.height,canva.width)
 }
+quebracabeca = setInterval(desenho,100)
 //desenho()
 
 
