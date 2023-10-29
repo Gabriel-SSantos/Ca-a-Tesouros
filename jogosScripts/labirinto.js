@@ -2,6 +2,7 @@ let src = './recursos/parede.png'
 let srcpersonagem = './recursos/personagem.png'
 let dimensionar = canva.width/1500*2.4
 let posicionar = canva.width/10
+let bnt = document.getElementById('botoesSec')
 console.log(dimensionar)
 
 let paredesLabirinto = [
@@ -134,6 +135,7 @@ let paredesLabirinto = [
 let personagem = new Personagem({posicao: {x: posicionar, y: 306*dimensionar}, dimensao: {l: 15*dimensionar, a: 15*dimensionar}},srcpersonagem)
 
 function desenharLabirinto(){
+    bnt.style.display = 'flex'
     ctx.clearRect(0,0,canva.width,canva.height)
     exibir(paredesLabirinto)
     personagem.atualizar()
