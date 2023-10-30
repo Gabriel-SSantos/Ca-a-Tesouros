@@ -142,36 +142,44 @@ const pincel = {
 }
 
 
+let mn = document.getElementById('main')
+let desconto = 0
+
 tela.onmousedown = (evento)=>{
+
     pincel.ativo = true;
-    pincel.posAnterior = {x:evento.clientX - 9,y:evento.clientY - 9}
+    desconto = (mn.clientHeight + 80) - canva.height 
+    pincel.posAnterior = {x:evento.clientX,y:evento.clientY}
 };
 
 tela.onmouseup = (evento)=>{
-    pincel.pos.x = evento.clientX - 9; 
-    pincel.pos.y = evento.clientY - 9;
+    pincel.pos.x = evento.pageX; 
+    pincel.pos.y = evento.pageY;
     posicao = {
         x: pincel.pos.x - pincel.posAnterior.x,
         y: pincel.pos.y - pincel.posAnterior.y 
     }
 };
 tela.onmousemove  = (evento)=>{
-    pincel.pos.x = evento.clientX - 9; 
-    pincel.pos.y = evento.clientY - 9;
+    pincel.pos.x = evento.clientX; 
+    pincel.pos.y =  evento.clientY;
+    console.log(desconto)
+    console.log('X:' + evento.clientX + ' Y:' + evento.clientY + ' nY: ' + (evento.clientY - desconto ))
 }
 
 tela.addEventListener('touchstart',(evento)=>{
     evento.preventDefault()
     var toque = evento.changedTouches;
     pincel.ativo = true;
-    pincel.posAnterior = {x: toque[0].pageX, y: toque[0].pageY}
+    desconto = (mn.clientHeight + 80) - canva.height 
+    pincel.posAnterior = {x: toque[0].pageX, y: toque[0].pageY - desconto}
 })
 
 tela.addEventListener('touchend',(evento)=>{
-   // pincel.posAnterior = null 
+
     var toque = evento.changedTouches;
     pincel.pos.x = toque[0].pageX 
-    pincel.pos.y = toque[0].pageY 
+    pincel.pos.y = toque[0].pageY - desconto
     posicao = {
         x: pincel.pos.x - pincel.posAnterior.x,
         y: pincel.pos.y - pincel.posAnterior.y 
@@ -182,7 +190,7 @@ tela.addEventListener('touchmove',(evento)=>{
     evento.preventDefault()
     var toque = evento.changedTouches;
     pincel.pos.x = toque[0].pageX; 
-    pincel.pos.y = toque[0].pageY;
+    pincel.pos.y = toque[0].pageY - desconto;
     pincel.posAnterior = {x: pincel.pos.x, y: pincel.pos.y}
     
 })
