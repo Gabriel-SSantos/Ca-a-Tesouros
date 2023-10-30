@@ -1,6 +1,6 @@
 let canva = document.getElementById('canva')
 let ctx = canva.getContext("2d")
-let tela = document.getElementById('tela')
+let tela = document.getElementsByTagName('body')[0]
 
 let altura = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 let largura = document.body.clientWidth
