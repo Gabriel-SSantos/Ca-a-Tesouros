@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    
+    <title>Labirinto</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main id="main">
+            <h1>Seus Desafios</h1>
+            <section class="secaoDesafiosAbertos">
+                <div class= 'DesafioAtual'> 
+                    <img src='../recursos/cadeadoAberto.png' alt='Cadeado Aberto'>
+                    <p class='textoDesafio'>Labirinto</p>
+                 </div>
+            </section> 
+            <section id="canvas" style="display: inline;">   
+                <section style="display: flex; flex-direction: column; align-items: center;">
+                    <div id="tela" style="position: relative; display: inline-block;">
+                        <canvas id="canva" style="display: inline; border: solid;">
+                        </canvas>
+                    </div>
+                </section>
+                <section id="botoesSec">
+                    <div>
+                        <img src="../recursos/botaomodelo03_up.png" onclick="mover(2)" class="botao" alt="Botao Up">  
+                    </div>
+                    <div style="width: 210px; display: flex; justify-content: space-between;">
+                        <img src="../recursos/botaomodelo03_esq.png" onclick="mover(0)" class="botao" alt="Botao Esqurdo">
+                       
+                        <img src="../recursos/botaomodelo03_dir.png" onclick="mover(1)" class="botao" alt="Botao Direito">
+                    </div>
+                    <div>
+                        <img src="../recursos/botaomodelo03_down.png" onclick="mover(3)" class="botao" alt="Botao Baixo">
+                   
+                    </div>
+                </section>
+            </section>
+            <a rel="inicio" href="../index.html">
+            <button style= "display: none; height: 34px; border-radius: 10%; background-color: #DFF0FF;">
+                Voltar ao inicio  
+            </button> 
+           </a>
+        </section> 
+    </main>
+    <footer>
+        <p>Juventude Êxodo</p>
+    </footer>
+    <script src="../jogosScripts/lib.js"></script>
+    <script src="../controles.js"></script>
+    <script src="../jogosScripts/labirinto.js"></script>
+
+</body>
+</html>

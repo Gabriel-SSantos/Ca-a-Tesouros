@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    
+    <title>QuebraCabeca</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <p id="alguemMeExplica"></p>
+    <main id="main">
+        <h1>Seus Desafios</h1>
+        <section class="secaoDesafiosAbertos">
+            <div class= 'DesafioAtual'> 
+                <img src='../recursos/cadeadoAberto.png' alt='Cadeado Aberto'>
+                <p class='textoDesafio'>Quebra Cabeça</p>
+             </div>
+        </section> 
+        <section id="canvas" style="display: inline;">   
+            <section style="display: flex; flex-direction: column; align-items: center;">
+                <div id="tela" style="position: relative; display: inline-block;">
+                    <canvas id="canva" style="display: inline; border: solid;">
+                    </canvas>
+                </div>
+            </section>
+        </section>
+        <a rel="inicio" href="../index.html">
+        <button style= "display: none; height: 34px; border-radius: 10%; background-color: #DFF0FF;">
+            Voltar ao inicio  
+        </button> 
+       </a>
+    </main>
+    <footer>
+        <p>Juventude Êxodo</p>
+    </footer>
+    <script src="../jogosScripts/lib.js"></script>
+    <script src="../controles.js"></script>
+    <script src="../jogosScripts/quebracabeça.js"></script>
+    <!-- <script src="../script.js"></script> -->
+
+</body>
+</html>

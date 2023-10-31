@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Caça Tesouro</title>
+</head>
+<body onload="atualizar()">
+    <header>
+
+    </header>
+    <main id="main">
+        <h1>Seus Desafios</h1>
+        <section id="secaoDesafios">
+            <div class="Desafio" onclick="desafios(0)"> 
+                <link rel="page" href="pages/quebraCabeca.html">
+                <img src="recursos/cadeadoFechado.png" alt="Cadeado Fechado">
+                <p class="textoDesafio">Desafio 1</p>
+            </div>
+            <div class="Desafio" onclick="desafios(1)"> 
+                <img src="recursos/cadeadoFechado.png" alt="Cadeado Fechado">
+                <p class="textoDesafio">Desafio 2</p>
+            </div>
+            <div class="Desafio" onclick="desafios(2)"> 
+                <img src="recursos/cadeadoFechado.png" alt="Cadeado Fechado">
+                <p class="textoDesafio">Desafio 3</p>
+            </div>
+            <div class="Desafio" onclick="desafios(3)"> 
+                <img src="recursos/cadeadoFechado.png" alt="Cadeado Fechado">
+                <p class="textoDesafio">Desafio 4</p>
+            </div>
+            <div class="Desafio" onclick="desafios(4)"> 
+                <img src="recursos/cadeadoFechado.png" alt="Cadeado Fechado">
+                <p class="textoDesafio">Desafio 5</p>
+            </div>
+        </section> 
+        <section id="desbloqueioDesafio">
+        </section>
+            <section style="display: none; flex-direction: column; align-items: center;" id="botoesSec">
+                <div>
+                    <input type="button" value="^" onclick="mover(2)" class="botao">
+                    
+                </div>
+                <div style="width: 210px; display: flex; justify-content: space-between;">
+                    <input type="button" value="<" onclick="mover(0)" class="botao">
+                    <input type="button" value=">" onclick="mover(1)" class="botao">
+                </div>
+                <div>
+                    <input type="button" value="v" onclick="mover(3)" class="botao">
+                </div>
+            </section>
+        </section> 
+    </main>
+    <footer>
+        <p>Juventude Êxodo</p>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>
