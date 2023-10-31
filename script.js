@@ -54,11 +54,11 @@ function chave(desafio,numDesafio){
 }
 
 function testes(){
-    if(keys.value == block[0] && desafioAtual == 0){
+    if((keys.value == block[0] && desafioAtual == 0) || statusDesafios[0] == 2){
         desafioDesbloqueado(0)
         statusDesafios[desafioAtual] = 1
     }
-    if(keys.value == block[1] && desafioAtual == 1){
+    if((keys.value == block[1] && desafioAtual == 1) || statusDesafios[1] == 2){
         statusDesafios[desafioAtual] = 1
         desafioDesbloqueado(1)
     }

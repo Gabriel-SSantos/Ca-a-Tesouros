@@ -102,7 +102,7 @@ let paredesLabirinto = [
     new Parede({posicao: {x: 234*dimensionar + posicionar, y: 290*dimensionar}, dimensao: {l: 11*dimensionar, a: 42*dimensionar}},src),
     new Parede({posicao: {x: 173*dimensionar + posicionar, y: 93*dimensionar}, dimensao: {l: 11*dimensionar, a: 87*dimensionar}},src),
     new Parede({posicao: {x: 205*dimensionar + posicionar, y: 173*dimensionar}, dimensao: {l: 11*dimensionar, a: 87*dimensionar}},src),
-    new Parede({posicao: {x: 173*dimensionar + posicionar, y: 26*dimensionar}, dimensao: {l: 11*dimensionar, a: 33*dimensionar}},src),
+    new Parede({posicao: {x: 173*dimensionar + posicionar, y: 21*dimensionar}, dimensao: {l: 11*dimensionar, a: 33*dimensionar}},src), //
     new Parede({posicao: {x: 206*dimensionar + posicionar, y: 53*dimensionar}, dimensao: {l: 11*dimensionar, a: 93*dimensionar}},src),
     new Parede({posicao: {x: 267*dimensionar + posicionar, y: 52*dimensionar}, dimensao: {l: 11*dimensionar, a: 80*dimensionar}},src), //
     new Parede({posicao: {x: 300*dimensionar + posicionar, y: 93*dimensionar}, dimensao: {l: 11*dimensionar, a: 42*dimensionar}},src),
@@ -128,8 +128,9 @@ let paredesLabirinto = [
     new Parede({posicao: {x: 363*dimensionar + posicionar, y: 40*dimensionar}, dimensao: {l: 11*dimensionar, a: 29*dimensionar}},src),
     new Parede({posicao: {x: 301*dimensionar + posicionar, y: 161*dimensionar}, dimensao: {l: 11*dimensionar, a: 24*dimensionar}},src),
     new Parede({posicao: {x: 459*dimensionar + posicionar, y: 53*dimensionar}, dimensao: {l: 12*dimensionar, a: 22*dimensionar}},src),
+    new Parede({posicao: {x: 14*dimensionar + posicionar, y: -2*dimensionar}, dimensao: {l: 12*dimensionar, a: 22*dimensionar}},src),
     new Parede({posicao: {x: 205*dimensionar + posicionar, y: 257*dimensionar}, dimensao: {l: 11*dimensionar, a: 15*dimensionar}},src)
-    // new Parede({posicao: {x: 394*dimensionar + posicionar, y: 79*dimensionar}, dimensao: {l: 11*dimensionar, a: 22*dimensionar}},src)    
+    // new Parede({posicao: {x: 173*dimensionar + posicionar, y: 79*dimensionar}, dimensao: {l: 11*dimensionar, a: 22*dimensionar}},src)    
     // y: 131
 ]
 
@@ -168,7 +169,7 @@ function desenharLabirinto(){
         clearInterval(labirintoTime)
         divDesafioConcluido = document.getElementsByClassName('DesafioAtual')[0]
         divDesafioConcluido.style.backgroundColor = '#69FF8A'
-        dica('../recursos/bauOutraPista.gif')
+        dica('../recursos/audio.mpeg','music')
         salvar(1)
     }
 

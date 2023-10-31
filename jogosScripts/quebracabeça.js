@@ -43,7 +43,7 @@ function desenho(){
         divDesafioConcluido = document.getElementsByClassName('DesafioAtual')[0]
         divDesafioConcluido.style.backgroundColor = '#69FF8A'
         salvar(0)
-        dica('../recursos/pistaExemplo.gif')
+        dica('../recursos/pistaExemplo.gif','gif')
     } 
 }
 

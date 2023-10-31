@@ -386,9 +386,21 @@ function contarPontos(v){
     
 }
 
-function dica(srcDica){
+function dica(srcDica,tipo){
     let sectio = document.createElement('section')
-    let pista = document.createElement('img')
+   // let pista2 = document.createElement('div')
+    //pista2.innerHTML = "<audio src = '../recursos/audio.mpeg' controls>"
+    //pista2.controls
+   //let pista2 = new Audio('../recursos/audio.mpeg')
+    //pista2.play()
+    let pista 
+    if(tipo == 'gif'){
+        pista = document.createElement('img')
+        console.log('gif')
+    } else if (tipo == 'music'){
+        pista = document.createElement('audio')
+        pista.controls = 'true'
+    }
     pista.src = srcDica
     pista.style.marginTop = '20%'
     pista.style.width = '96%'
