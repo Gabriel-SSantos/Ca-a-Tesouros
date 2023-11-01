@@ -32,15 +32,11 @@ function desafios(d){
     }
     
 }
-function desafio2(){
-    bnt.style.display = 'flex'
-    desenharLabirinto()
-}
 
 function chave(desafio,numDesafio){
     desblock.style.display = 'inline'
     desblock.innerHTML = 
-    `<div class="Desafio" onclick="desafio${numDesafio}()"> 
+    `<div class="Desafio"> 
         <img src="recursos/cadeadoFechado.png" alt="Cadeado Fechado">
         <p class="textoDesafio">${desafio}</p> 
     </div>
@@ -54,13 +50,20 @@ function chave(desafio,numDesafio){
 }
 
 function testes(){
-    if((keys.value == block[0] && desafioAtual == 0) || statusDesafios[0] == 2){
+    if((keys.value == block[0] || statusDesafios[0] == 2) && desafioAtual == 0){
         desafioDesbloqueado(0)
-        statusDesafios[desafioAtual] = 1
+        if(statusDesafios[0] != 2)
+            statusDesafios[desafioAtual] = 1
     }
-    if((keys.value == block[1] && desafioAtual == 1) || statusDesafios[1] == 2){
-        statusDesafios[desafioAtual] = 1
+    if((keys.value == block[1] || statusDesafios[1] == 2) && desafioAtual == 1){
+        if(statusDesafios[1] != 2)
+            statusDesafios[desafioAtual] = 1
         desafioDesbloqueado(1)
+    }
+    if((keys.value == block[2] || statusDesafios[2] == 2) && desafioAtual == 2){
+        if(statusDesafios[2] != 2)
+            statusDesafios[desafioAtual] = 1
+        desafioDesbloqueado(2)
     }
     localStorage.DesafiosAbertos = JSON.stringify(statusDesafios)
 }
@@ -74,6 +77,9 @@ function desafioDesbloqueado(desafioAt){
         break;
         case 1:
             window.location.href = 'pages/labirinto.html'
+        break;
+        case 2:
+            window.location.href = 'pages/Quiz.html'
         break;
     }  
 }
