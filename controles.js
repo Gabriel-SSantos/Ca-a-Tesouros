@@ -161,7 +161,10 @@ tela.onmouseup = (evento)=>{
 tela.onmousemove  = (evento)=>{
     pincel.pos.x = evento.clientX; 
     pincel.pos.y =  evento.clientY;
-   
+    posicao = {
+        x: pincel.pos.x - pincel.posAnterior.x,
+        y: pincel.pos.y - pincel.posAnterior.y 
+    }
 }
 
 tela.addEventListener('touchstart',(evento)=>{
@@ -189,5 +192,9 @@ tela.addEventListener('touchmove',(evento)=>{
     pincel.pos.x = toque[0].pageX; 
     pincel.pos.y = toque[0].pageY - desconto;
     pincel.posAnterior = {x: pincel.pos.x, y: pincel.pos.y}
+    posicao = {
+        x: pincel.pos.x - pincel.posAnterior.x,
+        y: pincel.pos.y - pincel.posAnterior.y 
+    }
     
 })
