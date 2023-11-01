@@ -18,7 +18,7 @@ let cima = {
     x: 30*dimensionar,
     y: 12.5,
     altura: 7.5,
-    largura: canva.width - 170*dimensionar,
+    largura: canva.width - 175*dimensionar,
     score: 0,
     speed: 3,
     desenhar(){
@@ -119,15 +119,15 @@ function desenhar(){
     bola.desenhar()
     ctx.font = "20px Arial"
     ctx.fillText("Jogador: " + cima.score, 25, 40*dimensionar)
-    ctx.fillText('Jogo: ' + baixo.score, canva.width - 50*dimensionar, 40*dimensionar) 
+    ctx.fillText('Jogo: ' + baixo.score, canva.width - 65*dimensionar, 40*dimensionar) 
     if(baixo.score == 3){
         vencer()
     }
 }
 let pong = setInterval(desenhar, 15)
-
+let bnt = document.getElementsByClassName('button')[0]
 function vencer(){
     clearInterval(pong)
-    //dica('../','music')
+    salvar(3)
 }
 

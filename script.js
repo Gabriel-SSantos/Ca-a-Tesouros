@@ -5,7 +5,7 @@ let bnt = document.getElementById('botoesSec')
 
 let keys = ''
 
-let block = ['Jo.3.16.','Sm119105','1Tm.4.12']
+let block = ['Jo.3.16.','Sm119105','1Tm.4.12','1Tm.3.15']
 let desafiosNomes = ['Quebra Cabeça', 'Labirinto']
 let desafioAtual = -1
 
@@ -65,6 +65,11 @@ function testes(){
             statusDesafios[desafioAtual] = 1
         desafioDesbloqueado(2)
     }
+    if((keys.value == block[3] || statusDesafios[3] == 2) && desafioAtual == 3){
+        if(statusDesafios[3] != 2)
+            statusDesafios[desafioAtual] = 1
+        desafioDesbloqueado(3)
+    }
     localStorage.DesafiosAbertos = JSON.stringify(statusDesafios)
 }
 
@@ -80,6 +85,9 @@ function desafioDesbloqueado(desafioAt){
         break;
         case 2:
             window.location.href = 'pages/Quiz.html'
+        break;
+        case 3:
+            window.location.href = 'pages/pong.html'
         break;
     }  
 }
