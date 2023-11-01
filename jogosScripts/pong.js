@@ -30,7 +30,7 @@ let baixo = {
 
 function movebloco(){
     if(pincel.ativo)
-        baixo.x = posicao.x
+        baixo.x = pincel.pos.x
     if(key.ArrowLeft.pressionado && baixo.x > 0)
     {
         baixo.x -= baixo.speed
