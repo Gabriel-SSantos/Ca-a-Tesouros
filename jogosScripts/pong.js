@@ -9,15 +9,32 @@ let bola={
     dirx: -1,
     dirY: 1,
     mod: 0,
-    speed: 1
+    speed: 1,
+    desenhar(){
+        ctx.fillRect(this.x,this.y,this.largura,this.altura)
+    }
 }
 let cima = {
-    x: 0,
+    x: 30*dimensionar,
     y: 12.5,
     altura: 7.5,
-    largura: canva.width,
+    largura: canva.width - 170*dimensionar,
     score: 0,
-    speed: 3
+    speed: 3,
+    desenhar(){
+        ctx.fillRect(this.x,this.y,this.largura,this.altura)
+    }
+}
+let cima2 = {
+    x: 175*dimensionar,
+    y: 12.5,
+    altura: 7.5,
+    largura: canva.width - 230*dimensionar,
+    score: 0,
+    speed: 3,
+    desenhar(){
+        ctx.fillRect(this.x,this.y,this.largura,this.altura)
+    }
 }
 let baixo = {
     x: canva.width/2 - 12.5,
@@ -25,7 +42,10 @@ let baixo = {
     altura: 7.5,
     largura: 35*dimensionar,
     score: 0,
-    speed: 3
+    speed: 3,
+    desenhar(){
+        ctx.fillRect(this.x,this.y,this.largura,this.altura)
+    }
 }
 
 function movebloco(){
@@ -42,12 +62,17 @@ function movebloco(){
     }
 }
 function movebola(){
-    if(cima.y + cima.altura >= bola.y && cima.y <= bola.y + bola.altura && cima.y + cima.altura > bola.y)
+    if(cima.y + cima.altura >= bola.y && cima.y <= bola.y + bola.altura && cima.x + cima.largura > bola.x && cima.x < bola.x)
     {
         bola.dirY = 1 
         bola.mod += 0.12
     } 
-    if(bola.y + bola.altura >= baixo.y && bola.y <= baixo.y && bola.x + bola.largura <= baixo.x + baixo.largura && bola.x > baixo.x){
+    if(cima2.y + cima2.altura >= bola.y && cima2.y <= bola.y + bola.altura && cima2.x + cima2.largura > bola.x && cima2.x < bola.x)
+    {
+        bola.dirY = 1 
+        bola.mod += 0.12
+    } 
+    if(bola.y + bola.altura >= baixo.y && bola.y <= baixo.y && bola.x + bola.largura  <= baixo.x + baixo.largura + 6*dimensionar && bola.x > baixo.x - 6*dimensionar){
         bola.dirY = -1
         bola.mod += 0.12
     }
@@ -64,8 +89,10 @@ function movebola(){
     bola.y += (bola.speed + bola.mod) * bola.dirY
 
     if(bola.y + bola.altura > baixo.y + baixo.altura ){
-        newgame("Player 2")
-    } 
+        newgame("Player 1")
+    } else if(bola.y < cima.y){
+        newgame('Jogo')
+    }
 }
 function newgame(winner){
     if(winner == "Player 1"){
@@ -77,6 +104,7 @@ function newgame(winner){
     baixo.x = canva.width/2 - 12.5
     bola.y = canva.height/2 - bola.altura/2 
     bola.x = canva.width/2 - bola.largura/2
+    bola.dirY = 1
     bola.mod = 0
 }
 function desenhar(){
@@ -85,12 +113,21 @@ function desenhar(){
     movebloco()
     movebola()
     ctx.fillStyle = "white"
-    ctx.fillRect(cima.x,cima.y,cima.largura,cima.altura)
-    ctx.fillRect(baixo.x,baixo.y,baixo.largura,baixo.altura)
-    ctx.fillRect(bola.x,bola.y,bola.largura,bola.altura)
-    ctx.font = "10px Arial"
-    ctx.fillText("Player  1: " + cima.score, 25, 10)
-    ctx.fillText('Player 2: ' + baixo.score, canva.width - 80, 10) 
+    cima.desenhar()
+    cima2.desenhar()
+    baixo.desenhar()
+    bola.desenhar()
+    ctx.font = "20px Arial"
+    ctx.fillText("Jogador: " + cima.score, 25, 40*dimensionar)
+    ctx.fillText('Jogo: ' + baixo.score, canva.width - 50*dimensionar, 40*dimensionar) 
+    if(baixo.score == 3){
+        vencer()
+    }
 }
-setInterval(desenhar, 15)
+let pong = setInterval(desenhar, 15)
+
+function vencer(){
+    clearInterval(pong)
+    //dica('../','music')
+}
 
