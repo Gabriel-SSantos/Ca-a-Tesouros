@@ -5,7 +5,6 @@ let srcPremio = '../recursos/bau.gif'
 let chaves = '../recursos/Key.png'
 let dimensionar = canva.width/1500*2.45
 let posicionar = canva.width/10
-let bnt = document.getElementsByTagName('button')[0]
 let paredesLabirinto = [
     new Parede({posicao: {x: 14*dimensionar + posicionar, y: 15*dimensionar}, dimensao: {l: 488*dimensionar, a: 11*dimensionar}},src), 
     new Parede({posicao: {x: 16*dimensionar + posicionar, y: 598*dimensionar}, dimensao: {l: 487*dimensionar, a: 11*dimensionar}},src),  
@@ -18,7 +17,7 @@ let paredesLabirinto = [
     new Parede({posicao: {x: 46*dimensionar + posicionar, y: 209*dimensionar}, dimensao: {l: 74*dimensionar, a: 11*dimensionar}},src),  
     new Parede({posicao: {x: 110*dimensionar + posicionar, y: 363*dimensionar}, dimensao: {l: 167*dimensionar, a: 11*dimensionar}},src), 
     new Parede({posicao: {x: 237*dimensionar + posicionar, y: 441*dimensionar}, dimensao: {l: 73*dimensionar, a: 11*dimensionar}},src), 
-    new Parede({posicao: {x: 205*dimensionar + posicionar, y: 288*dimensionar}, dimensao: {l: 136*dimensionar, a: 11*dimensionar}},src), 
+    new Parede({posicao: {x: 199*dimensionar + posicionar, y: 288*dimensionar}, dimensao: {l: 143*dimensionar, a: 11*dimensionar}},src), //
     new Parede({posicao: {x: 333*dimensionar + posicionar, y: 400*dimensionar}, dimensao: {l: 71*dimensionar, a: 11*dimensionar}},src), 
     new Parede({posicao: {x: 332*dimensionar + posicionar, y: 480*dimensionar}, dimensao: {l: 106*dimensionar, a: 11*dimensionar}},src), 
     new Parede({posicao: {x: 205*dimensionar + posicionar, y: 403*dimensionar}, dimensao: {l: 43*dimensionar, a: 11*dimensionar}},src), 
@@ -30,7 +29,7 @@ let paredesLabirinto = [
     new Parede({posicao: {x: 80*dimensionar + posicionar, y: 555*dimensionar}, dimensao: {l: 75*dimensionar, a: 11*dimensionar}},src), 
     new Parede({posicao: {x: 110*dimensionar + posicionar, y: 520*dimensionar}, dimensao: {l: 40*dimensionar, a: 11*dimensionar}},src), 
     new Parede({posicao: {x: 364*dimensionar + posicionar, y: 520*dimensionar}, dimensao: {l: 40*dimensionar, a: 11*dimensionar}},src), 
-    new Parede({posicao: {x: 427*dimensionar + posicionar, y: 519*dimensionar}, dimensao: {l: 42*dimensionar, a: 11*dimensionar}},src), 
+    new Parede({posicao: {x: 427*dimensionar + posicionar, y: 519*dimensionar}, dimensao: {l: 45*dimensionar, a: 11*dimensionar}},src), //
     new Parede({posicao: {x: 427*dimensionar + posicionar, y: 558*dimensionar}, dimensao: {l: 41*dimensionar, a: 11*dimensionar}},src), 
     new Parede({posicao: {x: 16*dimensionar + posicionar, y: 245*dimensionar}, dimensao: {l: 74*dimensionar, a: 11*dimensionar}},src), 
     new Parede({posicao: {x: 45*dimensionar + posicionar, y: 272*dimensionar}, dimensao: {l: 75*dimensionar, a: 11*dimensionar}},src), 
@@ -43,7 +42,7 @@ let paredesLabirinto = [
     new Parede({posicao: {x: 141*dimensionar + posicionar, y: 287*dimensionar}, dimensao: {l: 42*dimensionar, a: 11*dimensionar}},src),  
     new Parede({posicao: {x: 141*dimensionar + posicionar, y: 324*dimensionar}, dimensao: {l: 104*dimensionar, a: 11*dimensionar}},src), 
     new Parede({posicao: {x: 149*dimensionar + posicionar, y: 93*dimensionar}, dimensao: {l: 35*dimensionar, a: 11*dimensionar}},src),  
-    new Parede({posicao: {x: 174*dimensionar + posicionar, y: 171*dimensionar}, dimensao: {l: 42*dimensionar, a: 11*dimensionar}},src), 
+    new Parede({posicao: {x: 174*dimensionar + posicionar, y: 171*dimensionar}, dimensao: {l: 46*dimensionar, a: 11*dimensionar}},src), //
     new Parede({posicao: {x: 173*dimensionar + posicionar, y: 52*dimensionar}, dimensao: {l: 44*dimensionar, a: 11*dimensionar}},src), 
     new Parede({posicao: {x: 208*dimensionar + posicionar, y: 91*dimensionar}, dimensao: {l: 42*dimensionar, a: 11*dimensionar}},src), 
     new Parede({posicao: {x: 237*dimensionar + posicionar, y: 52*dimensionar}, dimensao: {l: 75*dimensionar, a: 11*dimensionar}},src), 
@@ -63,7 +62,7 @@ let paredesLabirinto = [
     new Parede({posicao: {x: 457*dimensionar + posicionar, y: 325*dimensionar}, dimensao: {l: 38*dimensionar, a: 11*dimensionar}},src), 
     new Parede({posicao: {x: 365*dimensionar + posicionar, y: 209*dimensionar}, dimensao: {l: 74*dimensionar, a: 11*dimensionar}},src), 
     new Parede({posicao: {x: 394*dimensionar + posicionar, y: 92*dimensionar}, dimensao: {l: 43*dimensionar, a: 11*dimensionar}},src), 
-    new Parede({posicao: {x: 401*dimensionar + posicionar, y: 53*dimensionar}, dimensao: {l: 70*dimensionar, a: 11*dimensionar}},src),
+    new Parede({posicao: {x: 394*dimensionar + posicionar, y: 53*dimensionar}, dimensao: {l: 77*dimensionar, a: 11*dimensionar}},src), //
     new Parede({posicao: {x: 460*dimensionar + posicionar, y: 91*dimensionar}, dimensao: {l: 35*dimensionar, a: 11*dimensionar}},src),// 
     new Parede({posicao: {x: 434*dimensionar + posicionar, y: 129*dimensionar}, dimensao: {l: 33*dimensionar, a: 11*dimensionar}},src), 
     new Parede({posicao: {x: 458*dimensionar + posicionar, y: 207*dimensionar}, dimensao: {l: 36*dimensionar, a: 11*dimensionar}},src),
@@ -73,7 +72,7 @@ let paredesLabirinto = [
     new Parede({posicao: {x: 492*dimensionar + posicionar, y: 325*dimensionar}, dimensao: {l: 11*dimensionar, a: 279*dimensionar}},src),
     new Parede({posicao: {x: 77*dimensionar + posicionar, y: 51*dimensionar}, dimensao: {l: 11*dimensionar, a: 54*dimensionar}},src), 
     new Parede({posicao: {x: 110*dimensionar + posicionar, y: 98*dimensionar}, dimensao: {l: 11*dimensionar, a: 40*dimensionar}},src),
-    new Parede({posicao: {x: 140*dimensionar + posicionar, y: 54*dimensionar}, dimensao: {l: 11*dimensionar, a: 162*dimensionar}},src),
+    new Parede({posicao: {x: 140*dimensionar + posicionar, y: 53*dimensionar}, dimensao: {l: 11*dimensionar, a: 162*dimensionar}},src), //
     new Parede({posicao: {x: 109*dimensionar + posicionar, y: 209*dimensionar}, dimensao: {l: 11*dimensionar, a: 163*dimensionar}},src),
     new Parede({posicao: {x: 139*dimensionar + posicionar, y: 367*dimensionar}, dimensao: {l: 11*dimensionar, a: 158*dimensionar}},src), 
     new Parede({posicao: {x: 205*dimensionar + posicionar, y: 558*dimensionar}, dimensao: {l: 11*dimensionar, a: 41*dimensionar}},src), 
@@ -117,7 +116,7 @@ let paredesLabirinto = [
     new Parede({posicao: {x: 458*dimensionar + posicionar, y: 443*dimensionar}, dimensao: {l: 11*dimensionar, a: 54*dimensionar}},src),
     new Parede({posicao: {x: 457*dimensionar + posicionar, y: 288*dimensionar}, dimensao: {l: 11*dimensionar, a: 40*dimensionar}},src),
     new Parede({posicao: {x: 428*dimensionar + posicionar, y: 92*dimensionar}, dimensao: {l: 11*dimensionar, a: 199*dimensionar}},src),
-    new Parede({posicao: {x: 394*dimensionar + posicionar, y: 53*dimensionar}, dimensao: {l: 11*dimensionar, a: 40*dimensionar}},src),
+    new Parede({posicao: {x: 394*dimensionar + posicionar, y: 60*dimensionar}, dimensao: {l: 11*dimensionar, a: 40*dimensionar}},src), //
     new Parede({posicao: {x: 457*dimensionar + posicionar, y: 129*dimensionar}, dimensao: {l: 11*dimensionar, a: 56*dimensionar}},src),
     new Parede({posicao: {x: 458*dimensionar + posicionar, y: 211*dimensionar}, dimensao: {l: 11*dimensionar, a: 50*dimensionar}},src),
     new Parede({posicao: {x: 301*dimensionar + posicionar, y: 175*dimensionar}, dimensao: {l: 11*dimensionar, a: 48*dimensionar}},src),
@@ -127,10 +126,10 @@ let paredesLabirinto = [
     new Parede({posicao: {x: 237*dimensionar + posicionar, y: 40*dimensionar}, dimensao: {l: 11*dimensionar, a: 22*dimensionar}},src),
     new Parede({posicao: {x: 363*dimensionar + posicionar, y: 40*dimensionar}, dimensao: {l: 11*dimensionar, a: 29*dimensionar}},src),
     new Parede({posicao: {x: 301*dimensionar + posicionar, y: 161*dimensionar}, dimensao: {l: 11*dimensionar, a: 24*dimensionar}},src),
-    new Parede({posicao: {x: 459*dimensionar + posicionar, y: 53*dimensionar}, dimensao: {l: 12*dimensionar, a: 22*dimensionar}},src),
+    new Parede({posicao: {x: 459*dimensionar + posicionar, y: 57*dimensionar}, dimensao: {l: 12*dimensionar, a: 18*dimensionar}},src),
     new Parede({posicao: {x: 14*dimensionar + posicionar, y: -2*dimensionar}, dimensao: {l: 12*dimensionar, a: 22*dimensionar}},src),
     new Parede({posicao: {x: 205*dimensionar + posicionar, y: 257*dimensionar}, dimensao: {l: 11*dimensionar, a: 15*dimensionar}},src)
-    // new Parede({posicao: {x: 173*dimensionar + posicionar, y: 79*dimensionar}, dimensao: {l: 11*dimensionar, a: 22*dimensionar}},src)    
+    // new Parede({posicao: {x: 427*dimensionar + posicionar, y: 520*dimensionar}, dimensao: {l: 11*dimensionar, a: 22*dimensionar}},src)    
     // y: 131
 ]
 
@@ -166,11 +165,7 @@ function desenharLabirinto(){
     
 
     if(final.atualizar(personagem)){
-        clearInterval(labirintoTime)
-        divDesafioConcluido = document.getElementsByClassName('DesafioAtual')[0]
-        divDesafioConcluido.style.backgroundColor = '#69FF8A'
-        dica('../recursos/audio.mpeg','music')
-        salvar(1)
+        vencer()
     }
 
     if(key.ArrowRight.pressionado)
@@ -199,7 +194,13 @@ function desenharLabirinto(){
     }
 
 }
-desenharLabirinto()
+function vencer(){
+    clearInterval(labirintoTime)
+    divDesafioConcluido = document.getElementsByClassName('DesafioAtual')[0]
+    divDesafioConcluido.style.backgroundColor = '#69FF8A'
+    dica('../recursos/audio.mpeg','music')
+    salvar(1)
+}
 function mover(p){
     if(p == 0){
         personagem.dirX = -1

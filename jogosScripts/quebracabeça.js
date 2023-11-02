@@ -39,11 +39,14 @@ function desenho(){
     colidirCom(quadro,quadro)
     contarPontos(quadro)
     if(pecasCorretas == 9){
-        clearInterval(quebracabeca)
-        divDesafioConcluido = document.getElementsByClassName('DesafioAtual')[0]
-        divDesafioConcluido.style.backgroundColor = '#69FF8A'
-        salvar(0)
-        dica('../recursos/pistaExemplo.gif','gif')
+       vencer() 
     } 
 }
 
+function vencer(){
+    clearInterval(quebracabeca)
+    divDesafioConcluido = document.getElementsByClassName('DesafioAtual')[0]
+    divDesafioConcluido.style.backgroundColor = '#69FF8A'
+    salvar(0)
+    dica('../recursos/pistaExemplo.gif','gif')
+}

@@ -65,24 +65,24 @@ function movebola(){
     if(cima.y + cima.altura >= bola.y && cima.y <= bola.y + bola.altura && cima.x + cima.largura > bola.x && cima.x < bola.x)
     {
         bola.dirY = 1 
-        bola.mod += 0.12
+        bola.mod += 0.13
     } 
     if(cima2.y + cima2.altura >= bola.y && cima2.y <= bola.y + bola.altura && cima2.x + cima2.largura > bola.x && cima2.x < bola.x)
     {
         bola.dirY = 1 
-        bola.mod += 0.12
+        bola.mod += 0.13
     } 
     if(bola.y + bola.altura >= baixo.y && bola.y <= baixo.y && bola.x + bola.largura  <= baixo.x + baixo.largura + 6*dimensionar && bola.x > baixo.x - 6*dimensionar){
         bola.dirY = -1
-        bola.mod += 0.12
+        bola.mod += 0.13
     }
     if(bola.x <= 0){
         bola.dirx = 1
-        bola.mod += 0.12
+        bola.mod += 0.13
     } 
     if(bola.x + bola.largura >= canva.width){
         bola.dirx = -1
-        bola.mod += 0.12
+        bola.mod += 0.13
     }
 
     bola.x += (bola.speed + bola.mod) * bola.dirx
@@ -101,7 +101,6 @@ function newgame(winner){
         pincel.ativo = false
         baixo.score++
     }
-    baixo.x = canva.width/2 - 12.5
     bola.y = canva.height/2 - bola.altura/2 
     bola.x = canva.width/2 - bola.largura/2
     bola.dirY = 1
@@ -127,6 +126,11 @@ function desenhar(){
 let pong = setInterval(desenhar, 15)
 let bnt = document.getElementsByClassName('button')[0]
 function vencer(){
+    ctx.font = "30px Arial"
+    ctx.fillText('Meus parabéns', canva.width - 180*dimensionar, 55*dimensionar)
+    ctx.fillText('A Pista está na sua frente', canva.width - 210*dimensionar, 75*dimensionar) 
+    let divDesafioConcluido = document.getElementsByClassName('DesafioAtual')[0]
+    divDesafioConcluido.style.backgroundColor = '#69FF8A'
     clearInterval(pong)
     salvar(3)
 }
