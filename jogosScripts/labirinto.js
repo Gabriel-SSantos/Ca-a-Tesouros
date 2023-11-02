@@ -203,18 +203,22 @@ function vencer(){
 }
 function mover(p){
     if(p == 0){
+        personagem.moverDireita(0.3)
         personagem.dirX = -1
         personagem.dirY = 0
     }
     if(p == 1){
+        personagem.moverEsquerda(0.3)
         personagem.dirX = 1
         personagem.dirY = 0
     }
     if(p == 2){
+        personagem.moverCima(0.3)
         personagem.dirY = 1
         personagem.dirX = 0
     }
     if(p == 3){
+        personagem.moverBaixo(0.3)
         personagem.dirY = -1
         personagem.dirX = 0
     }
