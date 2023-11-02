@@ -12,7 +12,7 @@ let paredesLabirinto = [
     new Parede({posicao: {x: 79*dimensionar + posicionar, y: 94*dimensionar}, dimensao: {l: 42*dimensionar, a: 11*dimensionar}},src),  
     new Parede({posicao: {x: 23*dimensionar + posicionar, y: 129*dimensionar}, dimensao: {l: 98*dimensionar, a: 11*dimensionar}},src), 
     new Parede({posicao: {x: 21*dimensionar + posicionar, y: 92*dimensionar}, dimensao: {l: 34*dimensionar, a: 11*dimensionar}},src), 
-    new Parede({posicao: {x: 110*dimensionar + posicionar, y: 53*dimensionar}, dimensao: {l: 41*dimensionar, a: 11*dimensionar}},src),  //
+    new Parede({posicao: {x: 105*dimensionar + posicionar, y: 53*dimensionar}, dimensao: {l: 41*dimensionar, a: 11*dimensionar}},src),  // ,-
     new Parede({posicao: {x: 46*dimensionar + posicionar, y: 171*dimensionar}, dimensao: {l: 98*dimensionar, a: 11*dimensionar}},src), 
     new Parede({posicao: {x: 46*dimensionar + posicionar, y: 209*dimensionar}, dimensao: {l: 74*dimensionar, a: 11*dimensionar}},src),  
     new Parede({posicao: {x: 110*dimensionar + posicionar, y: 363*dimensionar}, dimensao: {l: 167*dimensionar, a: 11*dimensionar}},src), 
@@ -122,7 +122,7 @@ let paredesLabirinto = [
     new Parede({posicao: {x: 301*dimensionar + posicionar, y: 175*dimensionar}, dimensao: {l: 11*dimensionar, a: 48*dimensionar}},src),
     new Parede({posicao: {x: 299*dimensionar + posicionar, y: 258*dimensionar}, dimensao: {l: 11*dimensionar, a: 31*dimensionar}},src),
     new Parede({posicao: {x: 96*dimensionar + posicionar, y: 586*dimensionar}, dimensao: {l: 11*dimensionar, a: 14*dimensionar}},src),
-    new Parede({posicao: {x: 127*dimensionar + posicionar, y: 19*dimensionar}, dimensao: {l: 11*dimensionar, a: 18*dimensionar}},src),
+    new Parede({posicao: {x: 122*dimensionar + posicionar, y: 19*dimensionar}, dimensao: {l: 11*dimensionar, a: 18*dimensionar}},src), // <-
     new Parede({posicao: {x: 237*dimensionar + posicionar, y: 40*dimensionar}, dimensao: {l: 11*dimensionar, a: 22*dimensionar}},src),
     new Parede({posicao: {x: 363*dimensionar + posicionar, y: 40*dimensionar}, dimensao: {l: 11*dimensionar, a: 29*dimensionar}},src),
     new Parede({posicao: {x: 301*dimensionar + posicionar, y: 161*dimensionar}, dimensao: {l: 11*dimensionar, a: 24*dimensionar}},src),
