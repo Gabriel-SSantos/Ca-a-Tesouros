@@ -12,7 +12,7 @@ let paredesLabirinto = [
     new Parede({posicao: {x: 79*dimensionar + posicionar, y: 94*dimensionar}, dimensao: {l: 42*dimensionar, a: 11*dimensionar}},src),  
     new Parede({posicao: {x: 23*dimensionar + posicionar, y: 129*dimensionar}, dimensao: {l: 98*dimensionar, a: 11*dimensionar}},src), 
     new Parede({posicao: {x: 21*dimensionar + posicionar, y: 92*dimensionar}, dimensao: {l: 34*dimensionar, a: 11*dimensionar}},src), 
-    new Parede({posicao: {x: 110*dimensionar + posicionar, y: 53*dimensionar}, dimensao: {l: 40*dimensionar, a: 11*dimensionar}},src),  
+    new Parede({posicao: {x: 110*dimensionar + posicionar, y: 53*dimensionar}, dimensao: {l: 41*dimensionar, a: 11*dimensionar}},src),  //
     new Parede({posicao: {x: 46*dimensionar + posicionar, y: 171*dimensionar}, dimensao: {l: 98*dimensionar, a: 11*dimensionar}},src), 
     new Parede({posicao: {x: 46*dimensionar + posicionar, y: 209*dimensionar}, dimensao: {l: 74*dimensionar, a: 11*dimensionar}},src),  
     new Parede({posicao: {x: 110*dimensionar + posicionar, y: 363*dimensionar}, dimensao: {l: 167*dimensionar, a: 11*dimensionar}},src), 
@@ -72,7 +72,7 @@ let paredesLabirinto = [
     new Parede({posicao: {x: 492*dimensionar + posicionar, y: 325*dimensionar}, dimensao: {l: 11*dimensionar, a: 279*dimensionar}},src),
     new Parede({posicao: {x: 77*dimensionar + posicionar, y: 51*dimensionar}, dimensao: {l: 11*dimensionar, a: 54*dimensionar}},src), 
     new Parede({posicao: {x: 110*dimensionar + posicionar, y: 98*dimensionar}, dimensao: {l: 11*dimensionar, a: 40*dimensionar}},src),
-    new Parede({posicao: {x: 140*dimensionar + posicionar, y: 53*dimensionar}, dimensao: {l: 11*dimensionar, a: 162*dimensionar}},src), //
+    new Parede({posicao: {x: 140*dimensionar + posicionar, y: 59*dimensionar}, dimensao: {l: 11*dimensionar, a: 159*dimensionar}},src), //
     new Parede({posicao: {x: 109*dimensionar + posicionar, y: 209*dimensionar}, dimensao: {l: 11*dimensionar, a: 163*dimensionar}},src),
     new Parede({posicao: {x: 139*dimensionar + posicionar, y: 367*dimensionar}, dimensao: {l: 11*dimensionar, a: 158*dimensionar}},src), 
     new Parede({posicao: {x: 205*dimensionar + posicionar, y: 558*dimensionar}, dimensao: {l: 11*dimensionar, a: 41*dimensionar}},src), 
@@ -129,7 +129,7 @@ let paredesLabirinto = [
     new Parede({posicao: {x: 459*dimensionar + posicionar, y: 57*dimensionar}, dimensao: {l: 12*dimensionar, a: 18*dimensionar}},src),
     new Parede({posicao: {x: 14*dimensionar + posicionar, y: -2*dimensionar}, dimensao: {l: 12*dimensionar, a: 22*dimensionar}},src),
     new Parede({posicao: {x: 205*dimensionar + posicionar, y: 257*dimensionar}, dimensao: {l: 11*dimensionar, a: 15*dimensionar}},src)
-    // new Parede({posicao: {x: 427*dimensionar + posicionar, y: 520*dimensionar}, dimensao: {l: 11*dimensionar, a: 22*dimensionar}},src)    
+    // new Parede({posicao: {x: 427*dimensionar + posicionar, y: 53*dimensionar}, dimensao: {l: 11*dimensionar, a: 22*dimensionar}},src)    
     // y: 131
 ]
 
@@ -146,7 +146,7 @@ let chave = [
     new Chave({posicao: {x: 280*dimensionar + posicionar, y: 114*dimensionar}, dimensao: {l: 19*dimensionar, a: 10*dimensionar}},chaves)
 ]
 
-let final = new Premio({posicao: {x: 505*dimensionar + posicionar, y: 289*dimensionar}, dimensao: {l: 45*dimensionar, a: 47*dimensionar}},srcPremio)
+let final = new Premio({posicao: {x: 505*dimensionar + posicionar, y: 285*dimensionar}, dimensao: {l: 55*dimensionar, a: 57*dimensionar}},srcPremio)
 
 let personagem = new Personagem({posicao: {x: posicionar, y: 306*dimensionar}, dimensao: {l: 15*dimensionar, a: 15*dimensionar}},srcpersonagem)
 let labirintoTime = setInterval(desenharLabirinto,0.001)
