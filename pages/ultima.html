@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    
+    <title>Última Prova</title>
+</head>
+<body onload="iniciar()">
+    <header>
+
+    </header>
+        <main id="main">
+            <h1>Seus Desafios</h1>
+            <section class="secaoDesafiosAbertos">
+                <div class= 'DesafioAtual'> 
+                    <img src='../recursos/cadeadoAberto.png' alt='Cadeado Aberto'>
+                    <p class='textoDesafio'>Jogo da memória</p>
+                 </div>
+            </section> 
+            <section id="quiz">
+                <div  id="pergunta">Encontre os pares</div>
+                <div>
+                    <img src="../recursos/p2.jpeg" alt="" width="20%" id="p2" onclick="virar(2,'p2')" class="imgPecas" >
+                    <img src="../recursos/p1.jpeg" alt="" width="20%" id="p1" onclick="virar(1,'p1')" class="imgPecas" >
+                    <img src="../recursos/p4.png" alt="" width="20%" id="p4" onclick="virar(4,'p4')" class="imgPecas" >
+                    <img src="../recursos/p3.jpeg" alt="" width="20%" id="p3" onclick="virar(3,'p3')" class="imgPecas" >
+                    <img src="../recursos/p2.jpeg" alt="" width="20%" id="p21" onclick="virar(2,'p21')" class="imgPecas" >
+                    <img src="../recursos/p4.png" alt="" width="20%" id="p41" onclick="virar(4,'p41')" class="imgPecas" >
+                    <img src="../recursos/p3.jpeg" alt="" width="20%" id="p31" onclick="virar(3,'p31')" class="imgPecas" >
+                    <img src="../recursos/p1.jpeg" alt="" width="20%" id="p11" onclick="virar(1,'p11')" class="imgPecas" >
+                </div>
+                <a rel="inicio" href="../index.html">
+                    <button id="voltar" style= "display: none; height: 34px; border-radius: 10%; background-color: #DFF0FF; margin-top: 5%;">
+                        Voltar ao inicio  
+                    </button> 
+                </a>
+            </section> 
+        </main>
+    <footer>
+        <p>Juventude Êxodo</p>
+    </footer>
+    <script src="../jogosScripts/lib.js"></script>
+    <script src="../jogosScripts/memoria.js"></script>
+
+</body>
+</html>

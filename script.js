@@ -5,7 +5,7 @@ let bnt = document.getElementById('botoesSec')
 
 let keys = ''
 
-let block = ['Jo.3.16.','Sm119105','1Tm.4.12','1Tm.3.15']
+let block = ['Jo.3.16.','Sm119105','1Tm.4.12','1Tm.3.15','Sm.133.1']
 let desafiosNomes = ['Quebra Cabeça', 'Labirinto']
 let desafioAtual = -1
 
@@ -50,25 +50,30 @@ function chave(desafio,numDesafio){
 }
 
 function testes(){
-    if((keys.value == block[0] || statusDesafios[0] == 2) && desafioAtual == 0){
+    if(keys.value == block[0] && desafioAtual == 0){
         desafioDesbloqueado(0)
         if(statusDesafios[0] != 2)
             statusDesafios[desafioAtual] = 1
     }
-    if((keys.value == block[1] || statusDesafios[1] == 2) && desafioAtual == 1){
+    if(keys.value == block[1] && desafioAtual == 1){
         if(statusDesafios[1] != 2)
             statusDesafios[desafioAtual] = 1
         desafioDesbloqueado(1)
     }
-    if((keys.value == block[2] || statusDesafios[2] == 2) && desafioAtual == 2){
+    if(keys.value == block[2] && desafioAtual == 2){
         if(statusDesafios[2] != 2)
             statusDesafios[desafioAtual] = 1
         desafioDesbloqueado(2)
     }
-    if((keys.value == block[3] || statusDesafios[3] == 2) && desafioAtual == 3){
+    if(keys.value == block[3] && desafioAtual == 3){
         if(statusDesafios[3] != 2)
             statusDesafios[desafioAtual] = 1
         desafioDesbloqueado(3)
+    }
+    if(keys.value == block[4] && desafioAtual == 4){
+        if(statusDesafios[4] != 2)
+            statusDesafios[desafioAtual] = 1
+        desafioDesbloqueado(4)
     }
     localStorage.DesafiosAbertos = JSON.stringify(statusDesafios)
 }
@@ -88,6 +93,9 @@ function desafioDesbloqueado(desafioAt){
         break;
         case 3:
             window.location.href = 'pages/pong.html'
+        break;
+        case 4:
+            window.location.href = 'pages/ultima.html'
         break;
     }  
 }
