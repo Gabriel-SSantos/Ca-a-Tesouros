@@ -72,7 +72,7 @@ let paredesLabirinto = [
     new Parede({posicao: {x: 492*dimensionar + posicionar, y: 325*dimensionar}, dimensao: {l: 11*dimensionar, a: 279*dimensionar}},src),
     new Parede({posicao: {x: 77*dimensionar + posicionar, y: 51*dimensionar}, dimensao: {l: 11*dimensionar, a: 54*dimensionar}},src), 
     new Parede({posicao: {x: 110*dimensionar + posicionar, y: 98*dimensionar}, dimensao: {l: 11*dimensionar, a: 40*dimensionar}},src),
-    new Parede({posicao: {x: 140*dimensionar + posicionar, y: 64*dimensionar}, dimensao: {l: 11*dimensionar, a: 154*dimensionar}},src), //
+    new Parede({posicao: {x: 140*dimensionar + posicionar, y: 53*dimensionar}, dimensao: {l: 11*dimensionar, a: 154*dimensionar}},src), // <-
     new Parede({posicao: {x: 109*dimensionar + posicionar, y: 209*dimensionar}, dimensao: {l: 11*dimensionar, a: 163*dimensionar}},src),
     new Parede({posicao: {x: 139*dimensionar + posicionar, y: 367*dimensionar}, dimensao: {l: 11*dimensionar, a: 158*dimensionar}},src), 
     new Parede({posicao: {x: 205*dimensionar + posicionar, y: 558*dimensionar}, dimensao: {l: 11*dimensionar, a: 41*dimensionar}},src), 
