@@ -5,8 +5,8 @@ let bnt = document.getElementById('botoesSec')
 
 let keys = ''
 
-//let block = ['Jo.3.16.','Sm119105','1Tm.4.12','1Tm.3.15','Sm.133.1']
-let block = ['','','','','']
+let block = ['Jo.3.16.','Sm119105','1Tm.4.12','1Tm.3.15','Sm.133.1']
+// let block = ['','','','','']
 let desafiosNomes = ['Quebra Cabeça', 'Labirinto']
 let desafioAtual = -1
 
