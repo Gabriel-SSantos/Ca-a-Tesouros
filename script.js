@@ -5,11 +5,12 @@ let bnt = document.getElementById('botoesSec')
 
 let keys = ''
 
-let block = ['Jo.3.16.','Sm119105','1Tm.4.12','1Tm.3.15','Sm.133.1']
+//let block = ['Jo.3.16.','Sm119105','1Tm.4.12','1Tm.3.15','Sm.133.1']
+let block = ['','','','','']
 let desafiosNomes = ['Quebra Cabeça', 'Labirinto']
 let desafioAtual = -1
 
-let statusDesafios = [2,2,2,2,2]
+let statusDesafios = [0,0,0,0,0]
 
 let quebracabeca = setInterval(null)
 function desafios(d){
